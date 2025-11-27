@@ -1,0 +1,31 @@
+# This is a version 1 formatted index.
+version: 1
+
+sources:
+
+  et/open:
+    summary: Emerging Threats Open Ruleset
+    description: |
+      Proofpoint ET Open is a timely and accurate rule set for detecting and blocking advanced threats
+    vendor: Proofpoint
+    license: MIT
+    url: https://rules.emergingthreats.net/open/suricata-8.0.2/emerging.rules.tar.gz
+
+  oisf/trafficid:
+    summary: Suricata Traffic ID ruleset
+    vendor: OISF
+    license: MIT
+    url: https://openinfosecfoundation.org/rules/trafficid/trafficid.rules
+    support-url: https://redmine.openinfosecfoundation.org/
+    min-version: 4.0.0
+    checksum: false
+
+  ptresearch/attackdetection:
+    summary: Positive Technologies Attack Detection Team ruleset
+    description: |
+      The Attack Detection Team searches for new vulnerabilities and 0-days, reproduces it and creates PoC exploits to understand how these security flaws work and how related attacks can be detected on the network layer. Additionally, we are interested in malware and hackers' TTPs, so we develop Suricata rules for detecting all sorts of such activities.
+    vendor: Positive Technologies
+    license: Custom
+    license-url: https://raw.githubusercontent.com/ptresearch/AttackDetection/master/LICENSE
+    url: https://raw.githubusercontent.com/ptresearch/AttackDetection/master/pt.rules.tar.gz
+    obsolete: no longer exists
