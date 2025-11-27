@@ -115,17 +115,17 @@ sources:
     min-version: 4.1.0
     checksum: false
 
-  malsilo/win-malware:
-    summary: Commodity malware rules
-    description: |
-      TCP/UDP, DNS and HTTP Windows threats artifacts observed at runtime.
-    vendor: malsilo
-    license: MIT
-    url: https://malsilo.gitlab.io/feeds/dumps/malsilo.rules.tar.gz
-    min-version: 4.1.0
-    homepage: https://raw-data.gitlab.io/post/malsilo_2.1/
-    checksum: true
-    obsolete: unmaintained
+  # malsilo/win-malware:
+  #   summary: Commodity malware rules
+  #   description: |
+  #     TCP/UDP, DNS and HTTP Windows threats artifacts observed at runtime.
+  #   vendor: malsilo
+  #   license: MIT
+  #   url: https://malsilo.gitlab.io/feeds/dumps/malsilo.rules.tar.gz
+  #   min-version: 4.1.0
+  #   homepage: https://raw-data.gitlab.io/post/malsilo_2.1/
+  #   checksum: true
+  #   obsolete: unmaintained
 
   stamus/lateral:
     summary: Lateral movement rules

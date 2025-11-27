@@ -19,11 +19,10 @@ jobs:
       # ---------------------------
       - name: Install Suricata
         run: |
-          sudo apt-get update
           sudo apt-get install -y software-properties-common
           sudo add-apt-repository ppa:oisf/suricata-stable -y
           sudo apt-get update
-          sudo apt-get install -y suricata=7.0.13
+          sudo apt-get install -y suricata
 
       - name: Set up Python
         uses: actions/setup-python@v5
