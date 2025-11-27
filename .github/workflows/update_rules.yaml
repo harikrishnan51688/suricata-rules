@@ -45,4 +45,4 @@ jobs:
       - name: Run Python update script
         run: |
           source venv/bin/activate
-          python main.py
+          sudo python main.py
