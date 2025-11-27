@@ -29,3 +29,111 @@ sources:
     license-url: https://raw.githubusercontent.com/ptresearch/AttackDetection/master/LICENSE
     url: https://raw.githubusercontent.com/ptresearch/AttackDetection/master/pt.rules.tar.gz
     obsolete: no longer exists
+
+  abuse.ch/sslbl-blacklist:
+    summary: Abuse.ch SSL Blacklist
+    description: |
+      The SSL Blacklist (SSLBL) is a project of abuse.ch with the goal
+      of detecting malicious SSL connections, by identifying and
+      blacklisting SSL certificates used by botnet C&C servers. In
+      addition, SSLBL identifies JA3 fingerprints that helps you to
+      detect & block malware botnet C&C communication on the TCP
+      layer.
+    vendor: Abuse.ch
+    license: CC0-1.0
+    url: https://sslbl.abuse.ch/blacklist/sslblacklist_tls_cert.tar.gz
+    checksum: false
+    replaces:
+      - sslbl/ssl-fp-blacklist
+  
+  abuse.ch/sslbl-ja3:
+    summary: Abuse.ch Suricata JA3 Fingerprint Ruleset
+    description: |
+      If you are running Suricata, you can use the SSLBL's Suricata
+      JA3 fingerprint ruleset to detect and/or block malicious SSL
+      connections in your network based on the JA3 fingerprint. Please
+      note that your need Suricata 4.1.0 or newer in order to use the
+      JA3 fingerprint ruleset.
+    vendor: Abuse.ch
+    license: CC0-1.0
+    url: https://sslbl.abuse.ch/blacklist/ja3_fingerprints.tar.gz
+    min-version: 4.1.0
+    checksum: false
+    replaces:
+      - sslbl/ja3-fingerprints
+
+  abuse.ch/sslbl-c2:
+    summary: Abuse.ch Suricata Botnet C2 IP Ruleset
+    description: |
+      This ruleset contains all botnet Command&Control servers (C&Cs)
+      identified by SSLBL to be associated with a blacklisted SSL
+      certificate.
+    vendor: Abuse.ch
+    license: CC0-1.0
+    url: https://sslbl.abuse.ch/blacklist/sslipblacklist.tar.gz
+    checksum: false
+    deprecated: Deprecated by source on 2025-01-03.
+
+  abuse.ch/feodotracker:
+    summary: Abuse.ch Feodo Tracker Botnet C2 IP ruleset
+    description: |
+      The Suricata Botnet C2 IP Ruleset contains botnet C2s tracked by
+      Feodo Tracker and can be used for both, Suricata and Snort open
+      source IDS/IPS. If you are running Suricata or Snort, you can
+      use this ruleset to detect and/or block network connections
+      towards hostline servers (IP address:port combination).
+    vendor: Abuse.ch
+    license: CC0-1.0
+    url: https://feodotracker.abuse.ch/downloads/feodotracker.tar.gz
+    checksum: false
+
+  abuse.ch/urlhaus:
+    summary: Abuse.ch URLhaus Suricata Rules
+    description: |
+      URLhaus is a project from abuse.ch with the goal of sharing
+      malicious URLs that are being used for malware distribution.
+    vendor: abuse.ch
+    url: https://urlhaus.abuse.ch/downloads/urlhaus_suricata.tar.gz
+    license: CC0-1.0
+    checksum: false
+
+  etnetera/aggressive:
+    summary: Etnetera aggressive IP blacklist
+    vendor: Etnetera a.s.
+    license: MIT
+    url: https://security.etnetera.cz/feeds/etn_aggressive.rules
+    min-version: 4.0.0
+    checksum: false
+
+  tgreen/hunting:
+    summary: Threat hunting rules
+    description: |
+      Heuristic ruleset for hunting. Focus on anomaly detection and showcasing latest engine features, not performance.
+    vendor: tgreen
+    license: GPLv3
+    url: https://github.com/travisbgreen/hunting-rules/raw/master/hunting.rules.tar.gz
+    min-version: 4.1.0
+    checksum: false
+
+  malsilo/win-malware:
+    summary: Commodity malware rules
+    description: |
+      TCP/UDP, DNS and HTTP Windows threats artifacts observed at runtime.
+    vendor: malsilo
+    license: MIT
+    url: https://malsilo.gitlab.io/feeds/dumps/malsilo.rules.tar.gz
+    min-version: 4.1.0
+    homepage: https://raw-data.gitlab.io/post/malsilo_2.1/
+    checksum: true
+    obsolete: unmaintained
+
+  stamus/lateral:
+    summary: Lateral movement rules
+    description: |
+      Suricata ruleset specifically focused on detecting lateral
+      movement in Microsoft Windows environments by Stamus Networks
+    vendor: Stamus Networks
+    min-version: 6.0.6
+    license: GPL-3.0-only
+    support-url: https://discord.com/channels/911231224448712714/911238451842666546
+    url: https://ti.stamus-networks.io/open/stamus-lateral-rules.tar.gz
