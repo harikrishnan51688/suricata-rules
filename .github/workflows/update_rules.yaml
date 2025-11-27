@@ -1,9 +1,8 @@
 name: Suricata rule update
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "0 2 * * *" # Run at every 2am
   workflow_dispatch:
 
 jobs:
