@@ -44,4 +44,4 @@ jobs:
           AWS_REGION: ap-southeast-2
         run: |
           source venv/bin/activate
-          sudo python main.py
+          sudo -E env PATH=$PATH python main.py
