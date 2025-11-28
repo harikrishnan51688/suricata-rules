@@ -1,6 +1,8 @@
 import boto3
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 AWS_ACCESS_KEY_ID = os.getenv("ACCESS_KEY")
 AWS_SECRET_ACCESS_KEY = os.getenv("SECRET_KEY")
@@ -17,7 +19,17 @@ s3 = boto3.client(
     region_name=AWS_REGION
 )
 
+def check_s3_connection():
+    try:
+        s3.list_objects_v2(Bucket=BUCKET_NAME, MaxKeys=1)
+        print("✔ S3 connection successful!")
+    except Exception as e:
+        print("❌ S3 connection failed:", e)
+        exit(1)
+
 def upload_tar_files():
+    # check the connection
+    check_s3_connection()
     # loop all files in the folder
     for file in os.listdir(FOLDER_PATH):
         if file.endswith(".tar.gz"):
@@ -31,4 +43,3 @@ def upload_tar_files():
                 print(f"✔ Uploaded: {file}")
             except Exception as e:
                 print(f"❌ Failed to upload {file}: {e}")
-
