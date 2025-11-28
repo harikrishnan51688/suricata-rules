@@ -2,6 +2,7 @@ import os
 from validator import validate_rules_files, combine_and_validate_rules
 from get_rules import process_yaml_sources
 from process_rules import create_tarball_archives
+from upload_rules import upload_tar_files
 
 
 
@@ -18,3 +19,4 @@ if __name__ == "__main__":
     validator_1 = validate_rules_files()
     validator_2 = combine_and_validate_rules()
     make_tarball = create_tarball_archives()
+    upload_to_s3 = upload_tar_files()

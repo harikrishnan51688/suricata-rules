@@ -1,3 +1,5 @@
 env/
 rules_downloads/
 combined_rules.rules
+.env
+__pycache__
