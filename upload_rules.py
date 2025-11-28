@@ -6,7 +6,7 @@ load_dotenv()
 
 AWS_ACCESS_KEY_ID = os.getenv("ACCESS_KEY")
 AWS_SECRET_ACCESS_KEY = os.getenv("SECRET_KEY")
-AWS_REGION = "ap-southeast-2"
+AWS_REGION = os.getenv("AWS_REGION", "ap-southeast-2")
 BUCKET_NAME = "suricata-rules-iitm"
 FOLDER_PATH = "./rules"
 
